@@ -452,7 +452,7 @@ footer p {
     font-family: 'Roboto', sans-serif;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 2000px) {
     body {
         font-size: 16px;
     }
