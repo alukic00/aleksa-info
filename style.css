@@ -4,16 +4,13 @@ body {
     padding: 0;
     background-color: #11111100;
     background-image: url("slike/fadara.jpg");
-   
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow-y: scroll;
-    
     height: 100%;
     color: #f4f4f4;
 }
-
 
 .video-background {
     position: fixed;
@@ -26,13 +23,11 @@ body {
     background-size: contain;
 }
 
-
 .video-background video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 
 .video-overlay {
     position: absolute;
@@ -40,39 +35,20 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Smanji vrednost ako želiš svetlije */
+    background: rgba(0, 0, 0, 0.5);
 }
-
-
-/* header {
-    position: fixed;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 20px 50px; 
-    background: rgba(0, 0, 0, 0);
-    color: white;
-    z-index: 1000; 
-}
-*/
 
 h1 {
     margin: 0;
     font-size: 24px;
 }
 
-/* Navigacija sakrivena van ekrana */
-/* Stilizovanje navigacionog bara */
 nav {
     position: static;
     width: 100%;
     top: 0;
     left: 0;
-    background: rgb(0, 0, 0,0.5);
+    background: rgb(0, 0, 0, 0.5);
     color: white;
     padding: 30px 0;
     z-index: 1000;
@@ -97,7 +73,7 @@ nav ul li {
 nav ul li:first-child a {
     font-weight: bold;
     font-size: 25px;
-    margin-right: 680px;
+    margin-right: 670px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -108,12 +84,9 @@ ul li a {
     font-weight: bold;
 }
 
-/* Sprečava preklapanje sadržaja sa fiksiranom navigacijom */
 body {
-    padding-top: 60px; /* Pomeranje sadržaja ispod navigacije */
+    padding-top: 60px;
 }
-
-
 
 button {
     background-color: #f4f4f4;
@@ -121,7 +94,6 @@ button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    /* margin-left: -145px; */
     margin-top: 20px;
     border-radius: 20px;
     font-size: medium;
@@ -132,40 +104,30 @@ button:hover {
     color: #f4f4f4;
 }
 
-/* Osnovne stilizacije za biografiju */
-/* Centriranje sekcije biografije na sredinu stranice */
 #biografija {
     display: flex;
     flex-direction: column;
-    /* Postavlja sadržaj u kolonu, tako da slika bude iznad teksta */
     align-items: center;
-    /* Centriranje sadržaja horizontalno */
     justify-content: center;
-    /* Centriranje sadržaja vertikalno */
     height: 100vh;
-    /* Koristi celo visinu stranice */
     text-align: center;
-    /* Centriranje teksta unutar sekcije */
     padding: 0px;
     margin-top: -50px;
     margin-right: 500px;
 }
 
-/* Osnovne stilizacije za biografiju */
 .bio-container {
     display: flex;
     align-items: center;
     gap: 20px;
     padding: 20px;
     justify-content: center;
-    /* Centriranje slike i teksta horizontalno */
 }
 
 .biopija {
     margin-top: -180px;
     margin-left: 150px;
     border: 2px solid white;
-    /* border-radius: 20px; */
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     border-radius: 20px;
@@ -174,22 +136,15 @@ button:hover {
 
 .bio-image {
     width: 500px;
-    /* Veća širina slike */
     height: 550px;
-    /* Veća visina slike */
     border-radius: 30%;
-    /* Okrugla slika */
     object-fit: cover;
-    /* Da slika bude proporcionalna */
 }
 
 .bio-info p {
-    
     margin: 50px 0px;
     font-size: 18px;
-    /* Veći font za tekst */
     text-align: center;
-
 }
 
 .bio-info p1 {
@@ -199,7 +154,6 @@ button:hover {
 
 .bio-info h2 {
     font-size: 40px;
-    /* Povećaj veličinu fonta za h2 */
     font-weight: bold;
     margin: 10px 0;
 }
@@ -208,7 +162,6 @@ button:hover {
     font-weight: bold;
 }
 
-/* Pozicioniranje sekcije My Story */
 #my-story {
     margin-top: 30px;
     padding: 20px;
@@ -216,13 +169,9 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0);
     border-radius: 10px;
     width: 100%;
-    /* Podesi širinu sekcije po želji */
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-    /* color: #f4f4f4; */
-    
-    /* Podesi maksimalnu širinu */
 }
 
 #my-story h2 {
@@ -239,6 +188,7 @@ button:hover {
     color: #000000;
     font-style: italic;
 }
+
 #my-story p1 {
     font-size: small;
     line-height: 1;
@@ -252,55 +202,41 @@ button:hover {
     line-height: 1.6;
     color: #000000;
     font-style: normal;
-    /* font-family: 'Times New Roman', Times, serif; */
 }
 
-/* Stilizovanje div-a sa ikonama */
 .social-icons {
     margin-left: 90px;
     margin-top: 20px;
     display: flex;
     align-items: center;
-
 }
 
 .social-icons a {
     text-decoration: none;
-    /* Uklanja podvlačenje linkova */
     color: #ffffff;
-    /* Postavljanje boje ikona */
     font-size: 30px;
-    /* Povećanje veličine ikona */
     margin-right: 15px;
-    /* Razmak između ikona */
-
-
 }
 
 .social-icons a:hover {
     color: #0077b5;
-    /* Boja na hover za LinkedIn */
 }
 
 .social-icons a i {
     margin-right: 5px;
-    /* Razmak između ikone i teksta */
-
 }
 
-/* Stilizovanje hover efekta za Instagram ikonu */
 .social-icons a:hover i {
     color: #E4405F;
-    /* Boja na hover za Instagram */
 }
 
 .education-card {
-    width: 300px; /* Možeš prilagoditi širinu */
+    width: 300px;
     padding: 20px;
-    border: 2px solid #ccc; /* Okvir */
-    border-radius: 15px; /* Zaobljeni uglovi */
+    border: 2px solid #ccc;
+    border-radius: 15px;
     text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Blaga senka */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     margin-left: 420px;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -324,11 +260,10 @@ button:hover {
     font-style: normal;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-/* Stil za dugme strelice */
 .scrollToTopBtn {
     position: fixed;
     bottom: 20px;
@@ -339,7 +274,7 @@ html{
     border-radius: 20px;
     padding: 15px;
     font-size: 20px;
-    display: none; /* Početno je sakriveno */
+    display: none;
     cursor: pointer;
     z-index: 1000;
 }
@@ -348,122 +283,104 @@ html{
     background-color: #868687;
 }
 
-/* Osnovna sekcija sa vežinama */
 #skills {
     padding: 60px;
-    /* background: #f4f4f9; Svetla pozadina za kontrast */
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    
 }
 
-/* Kontejner za boxove (za Frontend i Backend) */
 .skills-container {
     display: flex;
     justify-content: left;
     gap: 10px;
-    flex-wrap: wrap; /* Da bude responzivno */
+    flex-wrap: wrap;
     margin-top: 50px;
     text-align: left;
 }
 
-/* Stilizacija za svaki box */
 .skill-box {
-    /* background: #ffffff; Bela pozadina za box */
-    border-radius: 10px; /* Zaobljene ivice */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Senka za moderan izgled */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 45%; /* Dva boxa po redu */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, background-color 0.5s ease; ; /* Efekat prilikom hover-a */
-    border: 2px solid black; /* Crna ivica oko boxa */
+    width: 45%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, background-color 0.5s ease;
+    border: 2px solid black;
 }
 
-/* Stilizacija za listu veština */
 .skill-box ul {
-    list-style-type: none; /* Uklanjanje tačaka sa liste */
+    list-style-type: none;
     padding: 0;
-    display: grid; /* Koristi grid za raspored veština */
-    grid-template-columns: repeat(2, 1fr); /* Podela u dve kolone */
-    gap: 10px; /* Razmak između elemenata */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
-/* Efekat za boxove pri prelazu miša (hover) */
 .skill-box:hover {
-    transform: translateY(-10px); /* Podizanje boxa */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Jača senka */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     background-color: #cdcccc;
     color: #ffffff;
-    
 }
 
-/* Naslov za svaki box */
 h3 {
     font-size: 26px;
     margin-bottom: 20px;
-    color: #000000; /* Tamna boja za tekst */
-    font-weight: 600; /* Boldirani naslovi */
-    letter-spacing: 1px; /* Razmak između slova za eleganciju */
+    color: #000000;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-/* Stilizacija liste unutar sekcije veština (samo za #skills sekciju) */
 #skills ul {
-    list-style-type: none; /* Uklanjamo standardne tačkice ili brojeve */
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#skills h2{
+#skills h2 {
     color: #000000;
     font-size: 24px;
 }
 
-#skills h1{
+#skills h1 {
     color: #b0afaf;
     font-size: 16px;
     margin-bottom: -15px;
     font-weight: 200;
 }
 
-
-/* Stilizacija stavki u listama (samo unutar #skills) */
 #skills li {
     font-size: 25px;
     margin-bottom: 12px;
     position: relative;
     padding-left: 30px;
-    color: #555; /* Tamno siva boja */
+    color: #555;
     font-weight: 500;
-    transition: color 0.3s ease; /* Efekat promene boje pri hover-u */
+    transition: color 0.3s ease;
 }
 
-/* Pseudo-element za stiklice ispred svakog <li> u #skills sekciji */
 #skills li::before {
-    content: "";  /* Ovdje nema teksta, samo slika */
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
-    width: 20px; /* Širina slike */
-    height: 20px; /* Visina slike */
-    background-image: url('slike/check.png'); /* Putanja do tvoje slike stiklice */
-    background-size: cover; /* Prilagođava veličinu slike unutar kvadrata */
-    background-position: center; /* Pozicionira sliku u centar */
-    border-radius: 50%; /* Čini sliku okruglom */
+    width: 20px;
+    height: 20px;
+    background-image: url('slike/check.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
 }
 
-/* Efekat pri hover-u na listama unutar #skills */
 #skills li:hover {
-    color: #535553; /* Promena boje teksta na zelenu prilikom hover-a */
+    color: #535553;
 }
 
-
-/* Kontakt sekcija */
 #contact {
     display: flex;
-    justify-content: center;  /* Centriranje horizontalno */
-    align-items: center;      /* Centriranje vertikalno */
-    flex-direction: column;   /* Postavljanje elemenata u kolonu */
-    /* height: 100vh;            Visina celog ekrana */
-    text-align: center;       /* Poravnanje teksta na sredinu */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 #contact h2 {
@@ -473,13 +390,12 @@ h3 {
     font-weight: 200;
 }
 
-/* Kontakt box */
 .contact-box {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Razmak između ikonica */
+    gap: 30px;
     margin-top: 20px;
-    flex-wrap: wrap; /* Omogućava da ikone prelaze u novi red ako je potrebno */
+    flex-wrap: wrap;
     border: 2px solid black;
     border-radius: 20px;
     width: 30%;
@@ -487,31 +403,28 @@ h3 {
     background-color: #ffffff;
 }
 
-/* Stil za svaku ikonu */
 .contact-icon {
-    width: 50px; /* Povećana veličina ikonica */
+    width: 50px;
     height: 50px;
-    background-color: #f1f1f1; /* Svetla pozadina za box */
-    border-radius: 50%; /* Okrugli oblik ikonica */
+    background-color: #f1f1f1;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Senka oko ikonica */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacija za hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 10px;
 }
 
-/* Efekat hover-a za ikone */
 .contact-icon:hover {
-    transform: scale(1.1); /* Blaga animacija (povećanje) */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Jača senka pri hover-u */
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Stilizacija za slike unutar ikonica */
 .contact-icon img {
-    width: 40px; /* Veličina slika unutar ikona */
+    width: 40px;
     height: 40px;
-    object-fit: cover; /* Čuva proporcije slike unutar okvira */
+    object-fit: cover;
 }
 
 #contact h3 {
@@ -522,51 +435,49 @@ h3 {
 }
 
 footer {
-    color: rgb(0, 0, 0); /* Bela boja teksta */
-    text-align: center; /* Centriranje teksta */
-    padding: 10px 0; /* Dodavanje margine oko teksta */
-    position: relative; /* Možeš koristiti ovo ako želiš da footer bude uvek na dnu stranice */
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
     bottom: 0;
     width: 100%;
     margin-top: 20px;
-    background-color: rgb(0, 0, 0,0.1);
+    background-color: rgb(0, 0, 0, 0.1);
     font-weight: 200;
 }
 
 footer p {
-    margin: 0; /* Uklanja marginu sa strane */
-    font-size: 16px; /* Veličina fonta */
+    margin: 0;
+    font-size: 16px;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Za ekrane manjih uređaja (tableti, mobilni telefoni) */
 @media (max-width: 768px) {
     body {
-        font-size: 16px; /* Smanjujemo font */
+        font-size: 16px;
     }
 
     .container {
         width: 100%;
-        padding: 10px; /* Dodajemo padding da bi sadržaj bio bliže ivici ekrana */
+        padding: 10px;
     }
 
     nav ul {
-        flex-direction: column; /* Menjamo raspored navigacije da bude vertikalna */
+        flex-direction: column;
         text-align: center;
     }
 
     .hero-section {
-        height: 60vh; /* Manja visina hero sekcije na manjim ekranima */
+        height: 60vh;
     }
 }
 
-/* Za još manji ekran, npr. mobilni telefoni */
 @media (max-width: 480px) {
     .hero-section {
-        height: 50vh; /* Još manja visina hero sekcije */
+        height: 50vh;
     }
 
     .contact-icon {
-        width: 40px; /* Smanjujemo ikone */
+        width: 40px;
     }
 }
