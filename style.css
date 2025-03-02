@@ -313,3 +313,167 @@ html{
 .scrollToTopBtn:hover {
     background-color: #868687;
 }
+
+/* Osnovna sekcija sa vežinama */
+#skills {
+    padding: 60px;
+    /* background: #f4f4f9; Svetla pozadina za kontrast */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+/* Kontejner za boxove (za Frontend i Backend) */
+.skills-container {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    flex-wrap: wrap; /* Da bude responzivno */
+    margin-top: 50px;
+    text-align: left;
+}
+
+/* Stilizacija za svaki box */
+.skill-box {
+    /* background: #ffffff; Bela pozadina za box */
+    border-radius: 10px; /* Zaobljene ivice */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Senka za moderan izgled */
+    padding: 30px;
+    width: 45%; /* Dva boxa po redu */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, background-color 0.5s ease; ; /* Efekat prilikom hover-a */
+    border: 2px solid black; /* Crna ivica oko boxa */
+}
+
+/* Stilizacija za listu veština */
+.skill-box ul {
+    list-style-type: none; /* Uklanjanje tačaka sa liste */
+    padding: 0;
+    display: grid; /* Koristi grid za raspored veština */
+    grid-template-columns: repeat(2, 1fr); /* Podela u dve kolone */
+    gap: 10px; /* Razmak između elemenata */
+}
+
+/* Efekat za boxove pri prelazu miša (hover) */
+.skill-box:hover {
+    transform: translateY(-10px); /* Podizanje boxa */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Jača senka */
+    background-color: #cdcccc;
+    color: #ffffff;
+    
+}
+
+/* Naslov za svaki box */
+h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333; /* Tamna boja za tekst */
+    font-weight: 600; /* Boldirani naslovi */
+    letter-spacing: 1px; /* Razmak između slova za eleganciju */
+}
+
+/* Stilizacija liste unutar sekcije veština (samo za #skills sekciju) */
+#skills ul {
+    list-style-type: none; /* Uklanjamo standardne tačkice ili brojeve */
+    padding: 0;
+    margin: 0;
+}
+
+#skills h2{
+    color: #000000;
+    font-size: 24px;
+}
+
+#skills h1{
+    color: #b0afaf;
+    font-size: 16px;
+    margin-bottom: -15px;
+}
+
+
+/* Stilizacija stavki u listama (samo unutar #skills) */
+#skills li {
+    font-size: 25px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 30px;
+    color: #555; /* Tamno siva boja */
+    font-weight: 500;
+    transition: color 0.3s ease; /* Efekat promene boje pri hover-u */
+}
+
+/* Pseudo-element za stiklice ispred svakog <li> u #skills sekciji */
+#skills li::before {
+    content: "";  /* Ovdje nema teksta, samo slika */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px; /* Širina slike */
+    height: 20px; /* Visina slike */
+    background-image: url('slike/check.png'); /* Putanja do tvoje slike stiklice */
+    background-size: cover; /* Prilagođava veličinu slike unutar kvadrata */
+    background-position: center; /* Pozicionira sliku u centar */
+    border-radius: 50%; /* Čini sliku okruglom */
+}
+
+/* Efekat pri hover-u na listama unutar #skills */
+#skills li:hover {
+    color: #535553; /* Promena boje teksta na zelenu prilikom hover-a */
+}
+
+
+/* Kontakt sekcija */
+#contact {
+
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#contact h2 {
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 30px;
+    margin-left: 500px;
+    
+}
+
+/* Kontakt box */
+.contact-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Razmak između ikonica */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Omogućava da ikone prelaze u novi red ako je potrebno */
+    border: 2px solid black;
+    width: 30%;
+    margin-top: 100px;
+    
+
+}
+
+/* Stil za svaku ikonu */
+.contact-icon {
+    width: 50px; /* Povećana veličina ikonica */
+    height: 50px;
+    background-color: #f1f1f1; /* Svetla pozadina za box */
+    border-radius: 50%; /* Okrugli oblik ikonica */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Senka oko ikonica */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacija za hover */
+}
+
+/* Efekat hover-a za ikone */
+.contact-icon:hover {
+    transform: scale(1.1); /* Blaga animacija (povećanje) */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Jača senka pri hover-u */
+}
+
+/* Stilizacija za slike unutar ikonica */
+.contact-icon img {
+    width: 40px; /* Veličina slika unutar ikona */
+    height: 40px;
+    object-fit: cover; /* Čuva proporcije slike unutar okvira */
+}
