@@ -41,3 +41,14 @@ scrollToTopBtn.addEventListener("click", function(event) {
     event.preventDefault(); // Sprečava podrazumevano ponašanje (skakanje)
     window.scrollTo({ top: 0, behavior: 'smooth' }); // Glatko skrolovanje ka početku
 });
+
+window.addEventListener("scroll", function () {
+    const scrollPosition = window.scrollY;
+    const fadeThreshold = 200; // Koliko treba da skroluje pre nego što počne fade
+    
+    if (scrollPosition > fadeThreshold) {
+        document.body.classList.add("scrolled");
+    } else {
+        document.body.classList.remove("scrolled");
+    }
+});
