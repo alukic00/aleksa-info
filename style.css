@@ -452,38 +452,117 @@ footer p {
     font-family: 'Roboto', sans-serif;
 }
 
-@media (max-width: 1024px) {
-    nav ul {
+@media (max-width: 1200px) {
+    .bio-container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
-    .bio-container, .skills-container {
+
+    .biopija {
+        margin-left: 0;
+    }
+
+    .bio-image {
+        width: 350px;
+        height: 400px;
+    }
+
+    .skills-container {
         flex-direction: column;
         align-items: center;
     }
+
+    .skill-box {
+        width: 80%;
+    }
+
     .education-card {
-        max-width: 80%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    nav ul li:first-child a {
+        margin-right: 0;
+        font-size: 22px;
+    }
+
+    .bio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bio-info p {
+        font-size: 16px;
+    }
+
+    .bio-image {
+        width: 300px;
+        height: 350px;
     }
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 16px;
+    .bio-container {
+        flex-direction: column;
     }
+
+    .biopija {
+        margin-top: 0;
+    }
+
+    .bio-image {
+        width: 250px;
+        height: 300px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skill-box {
+        width: 100%;
+    }
+
+    .contact-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
     nav ul {
         flex-direction: column;
-        text-align: center;
     }
-    .bio-container, .skills-container {
-        flex-direction: column;
-        align-items: center;
+
+    nav ul li {
+        margin: 10px 0;
     }
+
     .bio-image {
-        max-width: 300px;
+        width: 200px;
+        height: 250px;
     }
-    .contact-box {
+
+    .skills-container {
         flex-direction: column;
-        align-items: center;
+    }
+
+    .skill-box {
+        width: 100%;
+    }
+
+    .contact-box {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
     }
 }
 
