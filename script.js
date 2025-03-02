@@ -52,3 +52,19 @@ window.addEventListener("scroll", function () {
         document.body.classList.remove("scrolled");
     }
 });
+
+// Otvaranje/zatvaranje menija
+document.getElementById('burger-icon').addEventListener('click', function(event) {
+    event.stopPropagation(); // Sprečava propagaciju događaja
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('active');
+});
+
+// Zatvaranje menija kada se klikne izvan njega
+document.addEventListener('click', function(event) {
+    const navList = document.querySelector('nav ul');
+    const burgerIcon = document.getElementById('burger-icon');
+    if (navList.classList.contains('active') && event.target !== burgerIcon && !burgerIcon.contains(event.target)) {
+        navList.classList.remove('active');
+    }
+});

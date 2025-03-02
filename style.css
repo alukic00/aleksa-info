@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #11111100;
-    background-image: url("slike/fadara.jpg");
+    background-image: url("slike/sivilo.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,7 +48,7 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    background: rgb(0, 0, 0, 0.5);
+    background: rgb(0, 0, 0, 0.3);
     color: white;
     padding: 30px 0;
     z-index: 1000;
@@ -172,6 +172,12 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
+    
+}
+.portfolio {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 #my-story h2 {
@@ -451,229 +457,202 @@ footer p {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
 }
-
-@media (max-width: 1200px) {
-    .bio-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .biopija {
-        margin-left: 0;
-    }
-
-    .bio-image {
-        width: 350px;
-        height: 400px;
-    }
-
-    .skills-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill-box {
-        width: 80%;
-    }
-
-    .education-card {
-        margin-left: 0;
-    }
+/* Burger meni stilovi */
+.menu-toggle {
+    display: none; /* Sakriven na desktopu */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
 }
 
-@media (max-width: 992px) {
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+#burger-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Stilovi za mobilni meni */
+@media (max-width: 768px) {
+    #burger-icon {
+        display: block;
+    }
+
     nav ul {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        padding-right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        top: -65%;
+        right: -450px; /* Početna pozicija: van ekrana */
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease-in-out; /* Tranzicija za klizanje */
     }
 
-    nav ul li:first-child a {
-        margin-right: 0;
-        font-size: 22px;
+    nav ul.active {
+        transform: translateX(-250px); /* Pomeri meni u ekran */
     }
 
-    .bio-container {
+    nav ul li {
+        margin: 15px 0;
+    }
+    #nav-list {
+        display: none; /* Sakrivanje menija */
         flex-direction: column;
-        align-items: center;
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
     }
 
-    .bio-info p {
-        font-size: 16px;
+    #nav-list.active {
+        display: flex; /* Prikazuje se kada je aktiviran burger meni */
     }
 
-    .bio-image {
-        width: 300px;
-        height: 350px;
+    #nav-list li {
+        margin: 10px 0;
     }
 }
 
 @media (max-width: 768px) {
+    #biografija {
+        margin-right: 0;
+        padding: 20px;
+    }
+
     .bio-container {
         flex-direction: column;
+        align-items: center;
     }
 
     .biopija {
-        margin-top: 0;
-    }
-
-    .bio-image {
-        width: 250px;
-        height: 300px;
-    }
-
-    .skills-container {
-        flex-direction: column;
-    }
-
-    .skill-box {
-        width: 100%;
-    }
-
-    .contact-box {
+        margin-left: 0;
+        margin-top: 20px;
         width: 90%;
     }
-}
-
-@media (max-width: 576px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
 
     .bio-image {
-        width: 200px;
-        height: 250px;
-    }
-
-    .skills-container {
-        flex-direction: column;
-    }
-
-    .skill-box {
         width: 100%;
-    }
-
-    .contact-box {
-        width: 100%;
-        flex-direction: column;
         height: auto;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1, h2 {
-        font-size: 22px;
-    }
-    .bio-image {
-        max-width: 250px;
-    }
-    .contact-icon {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-/* Media query za telefone do 768px širine */
-@media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-        padding: 0;
-        margin: 0;
-    }
-
-    .video-background video {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-    }
-
-    .bio-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .bio-image {
-        width: 80%;
-        height: auto;
+        max-width: 300px;
         border-radius: 20px;
     }
 
-    .biopija {
-        width: 90%;
-        margin: 10px auto;
-        padding: 15px;
+    .bio-info h2 {
+        font-size: 30px;
     }
 
-    #my-story {
-        width: 90%;
-        padding: 15px;
+    .bio-info p {
+        font-size: 26px;
     }
 
+    .social-icons{
+        display: flex;
+        justify-content: start;
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 768px) {
     .skills-container {
         flex-direction: column;
         align-items: center;
     }
 
     .skill-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .skill-box ul {
+        grid-template-columns: 1fr; /* Jedna kolona na mobilnim uređajima */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-box {
         width: 90%;
+        flex-direction: row;
+        height: auto;
+        padding: 10px;
+    }
+
+    .contact-icon {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #my-story {
         padding: 20px;
+    }
+
+    #my-story p1 {
+        margin-left: 40%;
+        text-align: center;
     }
 
     .education-card {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 10%;
+        width: 70%;
     }
 
-    .social-icons {
-        justify-content: center;
+    .portfolio {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .bio-image {
+        max-width: 250px;
     }
 
-    .contact-box {
-        width: 90%;
+    .bio-info h2 {
+        font-size: 24px;
     }
 
-    /* Burger meni */
-    nav {
-        position: relative;
-        background: rgba(0, 0, 0, 0.8);
+    .bio-info p {
+        font-size: 14px;
     }
 
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
+    .skill-box {
+        padding: 15px;
     }
 
-    .menu-toggle div {
+    .skill-box ul {
+        font-size: 14px;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-icon img {
         width: 30px;
-        height: 4px;
-        background: white;
-        margin: 6px 0;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 50px;
-        left: 0;
-        padding: 20px;
-    }
-
-    nav ul.active {
-        display: flex;
+        height: 30px;
     }
 }
