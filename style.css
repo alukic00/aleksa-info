@@ -1,0 +1,315 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #11111100;
+    background-image: url("slike/fadara.jpg");
+    /* Relativna putanja */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    /* Omogućava vertikalno skrolovanje */
+    height: 100%;
+    color: #f4f4f4;
+}
+
+
+/* header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 50px; 
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    z-index: 1000; 
+}
+*/
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigacija sakrivena van ekrana */
+/* Stilizovanje navigacionog bara */
+nav {
+    position: static;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0,0.1);
+    color: white;
+    padding: 100px 0;
+    z-index: 1000;
+    transition: top 0.5s ease-in-out;
+    margin-top: -140px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    padding-right: 100px;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li:first-child a {
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 700px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Sprečava preklapanje sadržaja sa fiksiranom navigacijom */
+body {
+    padding-top: 60px; /* Pomeranje sadržaja ispod navigacije */
+}
+
+
+
+button {
+    background-color: #f4f4f4;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    /* margin-left: -145px; */
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: medium;
+}
+
+button:hover {
+    background-color: #616161;
+    color: #f4f4f4;
+}
+
+/* Osnovne stilizacije za biografiju */
+/* Centriranje sekcije biografije na sredinu stranice */
+#biografija {
+    display: flex;
+    flex-direction: column;
+    /* Postavlja sadržaj u kolonu, tako da slika bude iznad teksta */
+    align-items: center;
+    /* Centriranje sadržaja horizontalno */
+    justify-content: center;
+    /* Centriranje sadržaja vertikalno */
+    height: 100vh;
+    /* Koristi celo visinu stranice */
+    text-align: center;
+    /* Centriranje teksta unutar sekcije */
+    padding: 0px;
+    margin-top: -50px;
+    margin-right: 500px;
+}
+
+/* Osnovne stilizacije za biografiju */
+.bio-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    /* Centriranje slike i teksta horizontalno */
+}
+
+.biopija {
+    margin-top: -300px;
+    margin-left: 150px;
+    /* background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; */
+}
+
+.bio-image {
+    width: 500px;
+    /* Veća širina slike */
+    height: 550px;
+    /* Veća visina slike */
+    border-radius: 30%;
+    /* Okrugla slika */
+    object-fit: cover;
+    /* Da slika bude proporcionalna */
+}
+
+.bio-info p {
+    margin: 5px 0;
+    font-size: 18px;
+    /* Veći font za tekst */
+    text-align: center;
+
+}
+
+.bio-info p1 {
+    color: #616161;
+    font-size: small;
+}
+
+.bio-info h2 {
+    font-size: 40px;
+    /* Povećaj veličinu fonta za h2 */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.bio-info strong {
+    font-weight: bold;
+}
+
+/* Pozicioniranje sekcije My Story */
+#my-story {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0);
+    border-radius: 10px;
+    width: 100%;
+    /* Podesi širinu sekcije po želji */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    
+    /* Podesi maksimalnu širinu */
+}
+
+#my-story h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #000000;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#my-story p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    font-style: italic;
+}
+#my-story p1 {
+    font-size: small;
+    line-height: 1;
+    color: #616161;
+    margin-left: 550px;
+    font-style: normal;
+}
+
+#my-story p2 {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    font-style: normal;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+
+/* Stilizovanje div-a sa ikonama */
+.social-icons {
+    margin-left: 90px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.social-icons a {
+    text-decoration: none;
+    /* Uklanja podvlačenje linkova */
+    color: #ffffff;
+    /* Postavljanje boje ikona */
+    font-size: 30px;
+    /* Povećanje veličine ikona */
+    margin-right: 15px;
+    /* Razmak između ikona */
+
+
+}
+
+.social-icons a:hover {
+    color: #0077b5;
+    /* Boja na hover za LinkedIn */
+}
+
+.social-icons a i {
+    margin-right: 5px;
+    /* Razmak između ikone i teksta */
+
+}
+
+/* Stilizovanje hover efekta za Instagram ikonu */
+.social-icons a:hover i {
+    color: #E4405F;
+    /* Boja na hover za Instagram */
+}
+
+.education-card {
+    width: 300px; /* Možeš prilagoditi širinu */
+    padding: 20px;
+    border: 2px solid #ccc; /* Okvir */
+    border-radius: 15px; /* Zaobljeni uglovi */
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Blaga senka */
+    margin-left: 420px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.education-card i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.education-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.education-card p {
+    font-size: 29px;
+    color: antiquewhite;
+    font-style: normal;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Stil za dugme strelice */
+.scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 20px;
+    display: none; /* Početno je sakriveno */
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.scrollToTopBtn:hover {
+    background-color: #868687;
+}
