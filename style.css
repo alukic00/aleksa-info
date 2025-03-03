@@ -2,17 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #11111100;
-    background-image: url("slike/sivilo.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow-y: scroll;
+    background-color: #ffffff;
+
     height: 100%;
     color: #f4f4f4;
 }
 
-.video-background {
+/* .video-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -36,7 +32,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-}
+} */
 
 h1 {
     margin: 0;
@@ -48,40 +44,44 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    background: rgb(0, 0, 0, 0.3);
+    background: rgb(255, 255, 255);
     color: white;
-    padding: 30px 0;
+    padding: 40px 0;
     z-index: 1000;
     transition: top 0.5s ease-in-out;
     margin-top: -70px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Poppins";
+
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
-    margin: 0;
+    margin-top: -20px;
     padding: 0;
     padding-right: 100px;
+
 }
 
 nav ul li {
-    margin: 0 30px;
+    margin: 0 20px;
+
 }
 
 nav ul li:first-child a {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 25px;
     margin-right: 670px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Poppins";
 }
 
 ul li a {
     text-decoration: none;
-    color: white;
-    font-size: 18px;
+    color: rgb(0, 0, 0);
     font-weight: bold;
+    font-size: 14px;
+
 }
 
 body {
@@ -89,19 +89,35 @@ body {
 }
 
 button {
-    background-color: #f4f4f4;
-    color: black;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: -10px;
     border-radius: 20px;
     font-size: medium;
+    width: 140px;
+
 }
 
 button:hover {
     background-color: #616161;
     color: #f4f4f4;
+}
+
+#cv {
+    display: flex;
+    /* Postavlja dugmad jedno pored drugog bez crte */
+    gap: 10px;
+    /* Pravi razmak između dugmadi */
+}
+
+#cv a {
+    display: inline-block;
+    /* Sprečava povezivanje linkova */
+    text-decoration: none;
+    /* Uklanja podrazumevanu crtu linka */
 }
 
 #biografija {
@@ -114,6 +130,12 @@ button:hover {
     padding: 0px;
     margin-top: -50px;
     margin-right: 500px;
+    background-image: url("slike/subtle.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    width: 100%;
 }
 
 .bio-container {
@@ -122,16 +144,19 @@ button:hover {
     gap: 20px;
     padding: 20px;
     justify-content: center;
+    gap: 300px;
 }
 
 .biopija {
     margin-top: -180px;
     margin-left: 150px;
     border: 2px solid white;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0);
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 20px;
+    color: #000000;
+
 }
 
 .bio-image {
@@ -139,12 +164,19 @@ button:hover {
     height: 550px;
     border-radius: 30%;
     object-fit: cover;
+
+    mix-blend-mode: normal; /* Možeš testirati i overlay, soft-light itd. */
+    /* opacity: 1; Lagana prozirnost za mekši prelaz */
+
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5); /* Senka za dubinu */
+
 }
 
 .bio-info p {
     margin: 50px 0px;
     font-size: 18px;
     text-align: center;
+    font-weight: bold;
 }
 
 .bio-info p1 {
@@ -172,8 +204,9 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-    
+
 }
+
 .portfolio {
     border: 2px solid black;
     border-radius: 20px;
@@ -183,7 +216,7 @@ button:hover {
 #my-story h2 {
     font-size: 32px;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     margin-top: 5px;
 }
@@ -215,6 +248,7 @@ button:hover {
     margin-top: 20px;
     display: flex;
     align-items: center;
+
 }
 
 .social-icons a {
@@ -457,9 +491,11 @@ footer p {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
 }
+
 /* Burger meni stilovi */
 .menu-toggle {
-    display: none; /* Sakriven na desktopu */
+    display: none;
+    /* Sakriven na desktopu */
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
@@ -496,23 +532,28 @@ footer p {
         background: rgba(0, 0, 0, 0.6);
         position: fixed;
         top: -65%;
-        right: -450px; /* Početna pozicija: van ekrana */
+        right: -450px;
+        /* Početna pozicija: van ekrana */
         width: 100%;
         height: 100vh;
         padding: 20px;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s ease-in-out; /* Tranzicija za klizanje */
+        transition: transform 0.3s ease-in-out;
+        /* Tranzicija za klizanje */
     }
 
     nav ul.active {
-        transform: translateX(-250px); /* Pomeri meni u ekran */
+        transform: translateX(-250px);
+        /* Pomeri meni u ekran */
     }
 
     nav ul li {
         margin: 15px 0;
     }
+
     #nav-list {
-        display: none; /* Sakrivanje menija */
+        display: none;
+        /* Sakrivanje menija */
         flex-direction: column;
         background: rgba(0, 0, 0, 0.3);
         position: absolute;
@@ -523,7 +564,8 @@ footer p {
     }
 
     #nav-list.active {
-        display: flex; /* Prikazuje se kada je aktiviran burger meni */
+        display: flex;
+        /* Prikazuje se kada je aktiviran burger meni */
     }
 
     #nav-list li {
@@ -563,7 +605,7 @@ footer p {
         font-size: 26px;
     }
 
-    .social-icons{
+    .social-icons {
         display: flex;
         justify-content: start;
         margin-left: 35%;
@@ -582,7 +624,8 @@ footer p {
     }
 
     .skill-box ul {
-        grid-template-columns: 1fr; /* Jedna kolona na mobilnim uređajima */
+        grid-template-columns: 1fr;
+        /* Jedna kolona na mobilnim uređajima */
     }
 }
 
@@ -612,15 +655,18 @@ footer p {
     .education-card {
         margin-left: 10%;
         width: 70%;
+        margin-left: 7%;
     }
 
     .portfolio {
         width: 70%;
-        margin: 0 auto;
+        margin-right: 1%;
+        margin-left: 7%;
     }
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
     width: 100%;
 }
@@ -640,6 +686,7 @@ html, body {
 
     .skill-box {
         padding: 15px;
+        margin-left: -5%;
     }
 
     .skill-box ul {
