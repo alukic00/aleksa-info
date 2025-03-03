@@ -529,9 +529,9 @@ footer p {
     nav ul {
         display: flex;
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(0, 0, 0, 0.9);
         position: fixed;
-        top: -65%;
+        top: -60%;
         right: -450px;
         /* Početna pozicija: van ekrana */
         width: 100%;
@@ -549,6 +549,10 @@ footer p {
 
     nav ul li {
         margin: 15px 0;
+    }
+    ul li a {
+        color: #cdcccc;
+    
     }
 
     #nav-list {
@@ -586,7 +590,7 @@ footer p {
 
     .biopija {
         margin-left: 0;
-        margin-top: 20px;
+        margin-top: 20%;
         width: 90%;
     }
 
@@ -609,6 +613,10 @@ footer p {
         display: flex;
         justify-content: start;
         margin-left: 35%;
+    }
+
+    .bio-info{
+        margin-top: 10px;
     }
 }
 
