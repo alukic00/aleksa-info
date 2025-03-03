@@ -34,6 +34,19 @@ body {
     background: rgba(0, 0, 0, 0.5);
 } */
 
+header li{
+    margin-bottom: 20px;
+}
+/* Stilovi za naslov u headeru */
+header li a {
+    font-size: 1.5em; /* Veličina fonta za naslov */
+    font-weight: bold; /* Podebljan tekst */
+    color: black; /* Crna boja teksta */
+    text-decoration: none; /* Uklanja podvučenje linka */
+    margin-left: 20px; /* Razmak sa leve strane */
+    font-family: "Poppins";
+    
+}
 h1 {
     margin: 0;
     font-size: 24px;
@@ -69,12 +82,12 @@ nav ul li {
 
 }
 
-nav ul li:first-child a {
+/* nav ul li:first-child a {
     font-weight: 600;
     font-size: 25px;
     margin-right: 670px;
     font-family: "Poppins";
-}
+} */
 
 ul li a {
     text-decoration: none;
@@ -165,10 +178,12 @@ button:hover {
     border-radius: 30%;
     object-fit: cover;
 
-    mix-blend-mode: normal; /* Možeš testirati i overlay, soft-light itd. */
+    mix-blend-mode: normal;
+    /* Možeš testirati i overlay, soft-light itd. */
     /* opacity: 1; Lagana prozirnost za mekši prelaz */
 
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5); /* Senka za dubinu */
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+    /* Senka za dubinu */
 
 }
 
@@ -504,7 +519,7 @@ footer p {
 .menu-toggle .bar {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -512,7 +527,7 @@ footer p {
 #burger-icon {
     display: none;
     font-size: 30px;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     position: absolute;
     top: 10px;
@@ -522,9 +537,16 @@ footer p {
 
 /* Stilovi za mobilni meni */
 @media (max-width: 768px) {
+    
     #burger-icon {
+        margin-top: 10%;
         display: block;
     }
+
+
+    /* nav{
+        padding: 70px;
+    } */
 
     nav ul {
         display: flex;
@@ -533,6 +555,7 @@ footer p {
         position: fixed;
         top: -60%;
         right: -450px;
+        margin-top: -20%;
         /* Početna pozicija: van ekrana */
         width: 100%;
         height: 100vh;
@@ -540,6 +563,44 @@ footer p {
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
         transition: transform 0.3s ease-in-out;
         /* Tranzicija za klizanje */
+    }
+
+    #cv {
+        display: flex;
+        /* Koristimo flexbox za horizontalno poravnanje */
+        justify-content: center;
+        /* Centrira dugmad horizontalno */
+        gap: 10px;
+        /* Razmak između dugmadi */
+        margin-top: 20px;
+        /* Razmak iznad dugmadi */
+    }
+
+    /* Stilovi za dugmad */
+    button {
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+        font-size: medium;
+        width: 140px;
+        /* Širina dugmeta */
+        transition: background-color 0.3s ease;
+        /* Glatka tranzicija za hover efekat */
+    }
+
+    button:hover {
+        background-color: #616161;
+        /* Boja na hover */
+    }
+
+    #cv a {
+        display: inline-block;
+        /* Sprečava povezivanje linkova */
+        text-decoration: none;
+        /* Uklanja podrazumevanu crtu linka */
     }
 
     nav ul.active {
@@ -550,9 +611,10 @@ footer p {
     nav ul li {
         margin: 15px 0;
     }
+
     ul li a {
         color: #cdcccc;
-    
+
     }
 
     #nav-list {
@@ -581,17 +643,23 @@ footer p {
     #biografija {
         margin-right: 0;
         padding: 20px;
+
     }
 
     .bio-container {
         flex-direction: column;
         align-items: center;
+        margin-top: -50%;
     }
 
     .biopija {
         margin-left: 0;
-        margin-top: 20%;
+        margin-top: -10%;
         width: 90%;
+        border: none;
+        display: flex;
+        justify-content: center;
+
     }
 
     .bio-image {
@@ -615,7 +683,7 @@ footer p {
         margin-left: 35%;
     }
 
-    .bio-info{
+    .bio-info {
         margin-top: 10px;
     }
 }
@@ -713,55 +781,190 @@ body {
 }
 
 /* Media queries za responzivnost */
+/* Stilovi za mobilni meni */
 @media (max-width: 768px) {
+    #burger-icon {
+        display: block;
+        /* background-color: #000000; */
+    }
+
+    /* Stilovi za crtice (linije) */
+    #burger-icon span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        /* Debljina crtice */
+        background-color: black;
+        /* Crna boja za crtice */
+        transition: all 0.3s ease;
+        /* Glatka tranzicija */
+        color: #000000;
+    }
+
+    nav {
+        padding: 80px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: -60%;
+        right: -450px;
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul.active {
+        transform: translateX(-250px);
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    ul li a {
+        color: #cdcccc;
+    }
+
+    #nav-list {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #nav-list.active {
+        display: flex;
+    }
+
+    #nav-list li {
+        margin: 10px 0;
+    }
+}
+
+/* Stilovi za biografiju na mobilnim uređajima */
+@media (max-width: 768px) {
+    #biografija {
+        margin-right: 0;
+        padding: 20px;
+    }
+
     .bio-container {
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
+        margin-top: -30%;
+        /* Uklonjeno negativno margine */
     }
 
     .biopija {
         margin-left: 0;
-        margin-top: 0;
+        margin-top: -70%;
+        /* Uklonjeno negativno margine */
+        width: 100%;
+        /* Puna širina */
+        border: none;
+        /* Uklonjen border */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        /* Elementi u koloni */
+        align-items: center;
+        /* Centrirano horizontalno */
+    }
+
+    .bio-image {
         width: 90%;
+        max-width: 400px;
+        /* Povećana slika */
+        height: auto;
+        border-radius: 20px;
+        /* margin-bottom: 20px; Razmak ispod slike */
+        margin-right: 10%;
+        margin-top: -70%;
+        margin-bottom: -40%;
     }
 
-    .bio-image {
-        max-width: 250px;
+    .bio-info {
+        justify-content: center;
+        text-align: center;
+        /* Centrirano */
+        margin-top: 10px;
+        margin-right: 10%;
+    }
+
+    .bio-info p1 {
+        font-size: 1.5em;
+        /* Povećan tekst */
+        margin-bottom: 10px;
+        /* Smanjen razmak */
     }
 
     .bio-info h2 {
-        font-size: 24px;
+        font-size: 2.5em;
+        /* Povećan tekst */
+        margin-bottom: 10px;
+        /* Smanjen razmak */
     }
 
     .bio-info p {
-        font-size: 16px;
-    }
-
-    .social-icons {
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .bio-image {
-        max-width: 200px;
-    }
-
-    .bio-info h2 {
-        font-size: 20px;
-    }
-
-    .bio-info p {
-        font-size: 14px;
+        font-size: 1.5em;
+        /* Povećan tekst */
+        margin-bottom: 20px;
+        /* Smanjen razmak */
     }
 
     #cv {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        justify-content: center;
+        /* Centrirano horizontalno */
+        gap: 10px;
+        /* Razmak između dugmadi */
+        margin-top: 20px;
+        /* Razmak iznad dugmadi */
     }
 
-    #cv button {
-        width: 100%;
-        margin: 5px 0;
+    button {
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        padding: 12px 24px;
+        /* Povećan padding */
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+        font-size: 1.2em;
+        /* Povećan font */
+        width: auto;
+        /* Automatska širina */
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #616161;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: start;
+        /* Centrirano horizontalno */
+        gap: 15px;
+        /* Razmak između ikonica */
+        margin-top: 20px;
+        /* Razmak iznad ikonica */
+
+    }
+
+    .social-icons a {
+        font-size: 3em;
+        /* Povećane ikonice */
+        color: black;
     }
 }
