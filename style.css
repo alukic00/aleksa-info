@@ -931,7 +931,11 @@ body {
         margin-top: 20px;
         /* Razmak iznad dugmadi */
     }
-
+     button {
+        width: 140px; /* Manja širina za manje ekrane */
+        padding: 10px 20px; /* Manji padding za manje ekrane */
+        font-size: 0.9em; /* Manja veličina fonta za manje ekrane */
+    }
     
 
     button:hover {
